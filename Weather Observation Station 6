@@ -1,0 +1,4 @@
+Select distinct city
+from station
+where city regexp "^[aeiou].*"
+order by 1 asc;
