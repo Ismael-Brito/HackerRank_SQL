@@ -1,0 +1,11 @@
+Select *
+from (select city, lenght(city)
+      from station
+      order by lenght(city), city)
+where rownum = 1
+union
+select *
+from (select city, lenght(city)
+      from station
+      order by lenght(city) desc,city)
+where rownum = 1;
